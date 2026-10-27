@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080A10" />
+      <stop offset="50%" stop-color="#0E1424" />
+      <stop offset="100%" stop-color="#121827" />
+    </linearGradient>
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B7CFF" />
+      <stop offset="100%" stop-color="#55D6C2" />
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg1)" />
+  <rect width="800" height="500" fill="url(#grid)" />
+  
+  <circle cx="400" cy="250" r="180" fill="rgba(139,124,255,0.06)" filter="blur(40px)" />
+  
+  <!-- Interface Card Mockup -->
+  <rect x="60" y="50" width="680" height="400" rx="16" fill="#0D111B" stroke="#252B3A" stroke-width="1.5" />
+  
+  <!-- Window Header -->
+  <rect x="60" y="50" width="680" height="46" rx="16" fill="#121827" />
+  <circle cx="86" cy="73" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="104" cy="73" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="122" cy="73" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="400" y="78" fill="#A7ACBC" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" font-weight="600">UniGuideBot // Neural RAG Architecture &amp; Reranker</text>
+  
+  <!-- Left Side: User Inquiry -->
+  <rect x="90" y="120" width="280" height="90" rx="10" fill="#141B2B" stroke="#252B3A" />
+  <text x="110" y="145" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">QUERY [Student]</text>
+  <text x="110" y="170" fill="#F4F3FF" font-family="Inter, sans-serif" font-size="13">"What are the fee waivers for open-merit CS at UET Mardan?"</text>
+  
+  <!-- Center: Embedding & Retrieval -->
+  <rect x="90" y="230" width="280" height="180" rx="10" fill="#141B2B" stroke="#8B7CFF" stroke-opacity="0.4" />
+  <text x="110" y="255" fill="#8B7CFF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PINECONE VECTOR RETRIEVAL</text>
+  <text x="110" y="280" fill="#A7ACBC" font-family="sans-serif" font-size="11">Candidate Chunks: 15 retrieved</text>
+  <rect x="110" y="295" width="240" height="26" rx="4" fill="#080A10" />
+  <text x="120" y="312" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="10">all-MiniLM-L6-v2 Embeddings</text>
+  
+  <rect x="110" y="330" width="240" height="26" rx="4" fill="#080A10" />
+  <text x="120" y="347" fill="#8B7CFF" font-family="'JetBrains Mono', monospace" font-size="10">CrossEncoder Rerank: Top 3 selected</text>
+  <text x="110" y="385" fill="#A7ACBC" font-family="'JetBrains Mono', monospace" font-size="10">Recall: 92.62% | Precision: 90.27%</text>
+
+  <!-- Right Side: Grounded Synthesis -->
+  <rect x="400" y="120" width="310" height="290" rx="10" fill="#141B2B" stroke="#252B3A" />
+  <text x="420" y="145" fill="#8B7CFF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">GROUNDED SYNTHESIS // FASTAPI + GROQ</text>
+  <text x="420" y="180" fill="#F4F3FF" font-family="Inter, sans-serif" font-size="13" font-weight="500">Official Prospectus Clause 14.3:</text>
+  <text x="420" y="210" fill="#A7ACBC" font-family="Inter, sans-serif" font-size="12" width="270">Students admitted on top-5 merit positions receive a 100% tuition concession for semester 1. CGPA &gt;= 3.5 is required to maintain.</text>
+  
+  <rect x="420" y="275" width="270" height="60" rx="6" fill="#080A10" stroke="#55D6C2" stroke-opacity="0.3" />
+  <text x="435" y="298" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">CITATION EVIDENCE</text>
+  <text x="435" y="318" fill="#A7ACBC" font-family="'JetBrains Mono', monospace" font-size="10">Doc: UET_Prospectus_2024_P48.pdf</text>
+
+  <rect x="420" y="355" width="130" height="28" rx="6" fill="rgba(139,124,255,0.2)" stroke="#8B7CFF" stroke-opacity="0.5" />
+  <text x="485" y="373" fill="#F4F3FF" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">FAITHFULNESS: 91.3%</text>
+</svg>

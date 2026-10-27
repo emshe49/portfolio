@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode theme (default when .light is active or system light) */
+:root {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-elevated: #FFFFFF;
+  --bg-nested: #F8FAFC;
+  --border-color: #E2E8F0;
+  --border-highlight: rgba(99, 102, 241, 0.25);
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --accent-violet: #6366F1;
+  --accent-violet-glow: rgba(99, 102, 241, 0.15);
+  --accent-mint: #0D9488;
+  --accent-mint-glow: rgba(13, 148, 136, 0.15);
+}
+
+/* Dark mode theme */
+.dark, :root:not(.light) {
+  --bg-primary: #080A10;
+  --bg-secondary: #0D111B;
+  --bg-elevated: #121827;
+  --bg-nested: #080A10;
+  --border-color: #252B3A;
+  --border-highlight: rgba(139, 124, 255, 0.3);
+  --text-primary: #F4F3FF;
+  --text-secondary: #A7ACBC;
+  --text-muted: #636C82;
+  --accent-violet: #8B7CFF;
+  --accent-violet-glow: rgba(139, 124, 255, 0.15);
+  --accent-mint: #55D6C2;
+  --accent-mint-glow: rgba(85, 214, 194, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* In light mode, ensure headlines rendered with text-white switch to high-contrast slate-900 */
+html.light .text-white {
+  color: #0F172A;
+}
+
+html.light button.bg-accent-violet .text-white,
+html.light a.bg-accent-violet .text-white,
+html.light .bg-accent-violet {
+  color: #FFFFFF !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-violet);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(139, 124, 255, 0.3);
+  color: var(--text-primary);
+}
+
+/* Background grid patterns */
+.dark .bg-grid-pattern, :root:not(.light) .bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+html.light .bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: var(--bg-elevated);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive typography clamp helpers */
+.text-hero-headline {
+  font-size: clamp(2.5rem, 6.5vw, 5.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.text-section-headline {
+  font-size: clamp(1.85rem, 4vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

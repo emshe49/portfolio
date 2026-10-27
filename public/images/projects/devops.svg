@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080A10" />
+      <stop offset="100%" stop-color="#141B2B" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg6)" />
+  <rect x="60" y="50" width="680" height="400" rx="16" fill="#0D111B" stroke="#252B3A" stroke-width="1.5" />
+  <rect x="60" y="50" width="680" height="46" rx="16" fill="#121827" />
+  <circle cx="86" cy="73" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="104" cy="73" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="122" cy="73" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="400" y="78" fill="#A7ACBC" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" font-weight="600">Docker &amp; Kubernetes Orchestration // CI/CD Pipeline</text>
+  
+  <rect x="90" y="120" width="190" height="280" rx="10" fill="#141B2B" stroke="#252B3A" />
+  <text x="110" y="150" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="11">DOCKER CONTAINER</text>
+  <rect x="110" y="170" width="150" height="60" rx="6" fill="#080A10" />
+  <text x="120" y="195" fill="#8B7CFF" font-family="'JetBrains Mono', monospace" font-size="10">Dockerfile: Multi-stage</text>
+  <text x="120" y="215" fill="#A7ACBC" font-family="'JetBrains Mono', monospace" font-size="9">Node Alpine Image: 82MB</text>
+
+  <rect x="305" y="120" width="190" height="280" rx="10" fill="#141B2B" stroke="#8B7CFF" stroke-opacity="0.4" />
+  <text x="325" y="150" fill="#8B7CFF" font-family="'JetBrains Mono', monospace" font-size="11">KUBERNETES CLUSTER</text>
+  <rect x="325" y="170" width="150" height="45" rx="6" fill="#080A10" />
+  <text x="335" y="192" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="10">Deployment: 3 Replicas</text>
+  <rect x="325" y="225" width="150" height="45" rx="6" fill="#080A10" />
+  <text x="335" y="247" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="10">Service: ClusterIP / LB</text>
+
+  <rect x="520" y="120" width="190" height="280" rx="10" fill="#141B2B" stroke="#252B3A" />
+  <text x="540" y="150" fill="#55D6C2" font-family="'JetBrains Mono', monospace" font-size="11">INFRASTRUCTURE</text>
+  <rect x="540" y="170" width="150" height="45" rx="6" fill="#080A10" />
+  <text x="550" y="192" fill="#F4F3FF" font-family="'JetBrains Mono', monospace" font-size="10">AWS Terraform Plan</text>
+  <rect x="540" y="225" width="150" height="45" rx="6" fill="#080A10" />
+  <text x="550" y="247" fill="#F4F3FF" font-family="'JetBrains Mono', monospace" font-size="10">Health: 99.98% Uptime</text>
+</svg>
