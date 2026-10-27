@@ -2,8 +2,8 @@ import type { ProfileData } from '../types/portfolio';
 
 export const profileData: ProfileData = {
   name: "Essa Raza",
-  tagline: "FULL-STACK DEVELOPER & AI RESEARCH ENTHUSIAST",
-  role: "MERN Stack Developer & Aspiring AI Researcher",
+  tagline: "RESEARCHING TRUSTWORTHY AI // BS CS GRADUATE, UET MARDAN",
+  role: "AI Systems Engineer & Master's Research Applicant",
   email: "zk074909@gmail.com",
   phone: "+92 318 9764318",
   location: "Mardan / Charsadda",
@@ -12,29 +12,30 @@ export const profileData: ProfileData = {
   linkedin: "https://www.linkedin.com/in/essa-raza-ba4b62243/",
   cvPdf: "/documents/Essa-Raza-CV.pdf",
   aboutStory: [
-    "I'm a Computer Science graduate from UET Mardan and a full-stack engineer currently building production web apps at ITNEXUS. I specialize in the MERN stack, high-performance APIs, and practical AI integrations.",
-    "While developing UniGuideBot, I became fascinated by the challenges of document understanding and RAG systems—specifically how to prevent hallucinations when querying complex, scanned PDFs. I'm now channeling this into postgraduate research, aiming for the Russian Open Doors Scholarship to build trustworthy, self-verifying retrieval systems."
+    "I am a Computer Science graduate from the University of Engineering and Technology (UET) Mardan with a final CGPA of 3.41/4.00, having twice received the Dean's Award Certificate of Appreciation for academic achievement.",
+    "While engineering UniGuideBot—an evidence-grounded academic policy assistant—I encountered concrete bottlenecks in parsing scanned circulars, tabular fee structures, and conflicting historical amendments. These real limitations directly motivate my proposed Master's research in Russia: developing self-verifying, citation-grounded retrieval systems.",
+    "Alongside academic research preparation, I bring production software engineering rigor from developing client-facing applications at ITNEXUS, architecting RESTful services, and orchestrating containerized microservices."
   ],
   stats: [
     {
       value: "3.41",
       label: "BS CS CGPA",
-      meta: "UET Mardan (2026)"
+      meta: "UET Mardan (Graduating 2026)"
+    },
+    {
+      value: "2×",
+      label: "Dean's Award",
+      meta: "Certificate of Appreciation"
+    },
+    {
+      value: "49 Queries",
+      label: "Curated Benchmark",
+      meta: "UET_Mardan_Eval_Dataset"
     },
     {
       value: "60+",
       label: "GitHub Repositories",
-      meta: "Open-Source & Production"
-    },
-    {
-      value: "92.6%",
-      label: "RAG Context Recall",
-      meta: "UniGuideBot Benchmark"
-    },
-    {
-      value: "Production",
-      label: "Live Deployed Apps",
-      meta: "Serving Real Traffic"
+      meta: "Systems, AI & Web Code"
     }
   ]
 };

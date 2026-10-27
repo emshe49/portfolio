@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { GithubIcon } from '../ui/Icons';
 import type { Project } from '../../types/portfolio';
 import { Badge } from '../ui/Badge';
@@ -12,6 +12,7 @@ export interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = false }) => {
   const isDeployed = Boolean(project.liveUrl);
+  const isUniGuideBot = project.id === 'uniguidebot';
 
   return (
     <div
@@ -27,6 +28,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = fa
               <Badge variant={project.category === 'AI & RAG' ? 'mint' : 'violet'} size="sm">
                 {project.category}
               </Badge>
+              {isUniGuideBot && (
+                <Badge variant="mint" size="sm">
+                  Flagship FYP
+                </Badge>
+              )}
               {isDeployed ? (
                 <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-accent-mint font-medium px-2 py-0.5 rounded bg-accent-mint/10 border border-accent-mint/30">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent-mint animate-pulse" />
@@ -76,11 +82,57 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = fa
           </div>
         </div>
 
-        {/* Description: ONLY rendered for non-deployed projects */}
-        {!isDeployed && project.description && (
-          <p className="text-content-secondary text-sm leading-relaxed font-sans pt-1">
+        {/* Role Meta */}
+        {project.role && (
+          <div className="font-mono text-xs text-content-muted">
+            <span className="text-accent-mint font-medium">Role:</span> {project.role}
+          </div>
+        )}
+
+        {/* Description: Always rendered for all projects */}
+        {project.description && (
+          <p className="text-content-secondary text-sm leading-relaxed font-sans">
             {project.description}
           </p>
+        )}
+
+        {/* Problem and Solution Panels */}
+        {(project.problem || project.solution) && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs font-mono">
+            {project.problem && (
+              <div className="p-3.5 rounded-xl bg-dark-400 border border-surface-border/80 space-y-1">
+                <span className="text-amber-400 font-medium block">Problem Statement:</span>
+                <p className="text-content-secondary font-sans leading-relaxed text-xs">
+                  {project.problem}
+                </p>
+              </div>
+            )}
+            {project.solution && (
+              <div className="p-3.5 rounded-xl bg-dark-400 border border-surface-border/80 space-y-1">
+                <span className="text-accent-mint font-medium block">Technical Approach:</span>
+                <p className="text-content-secondary font-sans leading-relaxed text-xs">
+                  {project.solution}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Features / Highlights */}
+        {project.features && project.features.length > 0 && (
+          <div className="space-y-1.5 pt-1">
+            <span className="font-mono text-[11px] text-content-muted uppercase tracking-wider block">
+              Key Implementation Highlights:
+            </span>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs font-sans text-content-secondary">
+              {project.features.map((feat, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent-violet shrink-0 mt-1.5" />
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
 
@@ -100,6 +152,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = fa
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-3 pt-1">
+          {isUniGuideBot && (
+            <Button
+              size="sm"
+              variant="primary"
+              href="#uniguidebot-study"
+              icon={<Sparkles className="w-3.5 h-3.5 text-accent-mint" />}
+              className="text-xs font-semibold"
+            >
+              View Research Case Study
+            </Button>
+          )}
+
           {isDeployed && project.liveUrl && (
             <Button
               size="sm"

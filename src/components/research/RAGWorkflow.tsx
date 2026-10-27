@@ -1,13 +1,14 @@
 import React from 'react';
-import { Check } from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
 import { proposedResearch } from '../../data/research';
 
 export const RAGWorkflow: React.FC = () => {
   return (
     <div className="rounded-2xl bg-surface-elevated border border-surface-border p-6 sm:p-8 space-y-7">
       <div>
-        <div className="font-mono text-xs uppercase tracking-wider text-accent-violet mb-1 font-semibold">
-          Proposed Research Framework
+        <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-accent-violet mb-1 font-semibold">
+          <Sparkles className="w-3.5 h-3.5 text-accent-mint" />
+          <span>Proposed Master's Research Framework</span>
         </div>
         <h3 className="text-xl sm:text-2xl font-display font-bold text-white tracking-tight mb-2">
           {proposedResearch.title}
@@ -19,8 +20,13 @@ export const RAGWorkflow: React.FC = () => {
 
       {/* Workflow Steps Vertical/Horizontal Pipeline */}
       <div className="space-y-3">
-        <div className="font-mono text-xs uppercase tracking-wider text-content-muted">
-          5-Stage Verification Pipeline:
+        <div className="flex items-center justify-between">
+          <div className="font-mono text-xs uppercase tracking-wider text-content-muted">
+            5-Stage Investigation Pipeline:
+          </div>
+          <span className="font-mono text-[11px] text-accent-mint/90 bg-accent-mint/10 border border-accent-mint/30 px-2 py-0.5 rounded">
+            Proposed Architecture // Open Doors Study
+          </span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
@@ -42,8 +48,8 @@ export const RAGWorkflow: React.FC = () => {
               </div>
 
               <div className="pt-3 mt-3 border-t border-surface-border/40 font-mono text-[10px] text-content-muted flex items-center justify-between">
-                <span>Verified</span>
-                <Check className="w-3 h-3 text-accent-mint" />
+                <span className="text-accent-violet/90">{step.status}</span>
+                <ArrowRight className="w-3 h-3 text-content-muted group-hover:text-accent-mint group-hover:translate-x-0.5 transition-all" />
               </div>
             </div>
           ))}
@@ -56,7 +62,7 @@ export const RAGWorkflow: React.FC = () => {
           "{proposedResearch.longTermQuote}"
         </blockquote>
         <div className="font-mono text-xs text-accent-mint pt-2 font-medium">
-          — Essa Raza
+          — Essa Raza // Research Statement Focus
         </div>
       </div>
     </div>

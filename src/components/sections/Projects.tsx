@@ -22,9 +22,28 @@ export const Projects: React.FC = () => {
         <Reveal>
           <SectionHeading
             label="PROJECTS"
-            title="FEATURED WORK & RESEARCH PROJECTS"
-            description="Production software platforms, verified AI retrieval systems, and academic engineering projects."
+            title="FEATURED WORK & SYSTEMS ENGINEERING"
+            description="Intelligent retrieval systems, production web applications, and containerized cloud pipelines."
           />
+        </Reveal>
+
+        {/* Research Linkage Banner */}
+        <Reveal delay={0.08}>
+          <div className="p-4 sm:p-5 rounded-xl bg-surface-elevated border border-accent-violet/30 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs">
+            <div className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-accent-mint animate-pulse shrink-0" />
+              <span className="text-content-secondary font-sans">
+                Reviewing for the Open Doors Scholarship? Explore the detailed <strong className="text-white">UniGuideBot Case Study &amp; Evaluation</strong> in the dedicated research section.
+              </span>
+            </div>
+            <a
+              href="#research"
+              className="text-accent-mint hover:underline font-semibold shrink-0 flex items-center gap-1"
+            >
+              <span>Jump to Research Section</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
         </Reveal>
 
         {/* Filter Navigation */}

@@ -27,17 +27,32 @@ export const Hero: React.FC = () => {
 
             <Reveal delay={0.15}>
               <h1 className="text-hero-headline font-display font-bold text-content-primary tracking-tight">
-                BUILDING DIGITAL PRODUCTS.<br />
+                RESEARCHING TRUSTWORTHY AI<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-content-primary via-accent-violet to-accent-mint">
-                  EXPLORING INTELLIGENT SYSTEMS.
+                  & DOCUMENT REASONING.
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.25}>
               <p className="text-content-secondary text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl font-sans">
-                Full-stack developer at <strong className="text-white font-medium">ITNEXUS</strong> and Computer Science graduate from <strong className="text-white font-medium">UET Mardan</strong>. Crafting production web apps and researching self-verifying, evidence-grounded AI systems.
+                Computer Science graduate from <strong className="text-white font-medium">UET Mardan</strong> (CGPA 3.41/4.00, twice recipient of the <strong className="text-accent-mint font-medium">Dean's Award Certificate of Appreciation</strong>). Building retrieval-augmented systems and investigating how AI can reason reliably over complex, evolving institutional documents.
               </p>
+            </Reveal>
+
+            {/* Academic Credential Badges */}
+            <Reveal delay={0.3}>
+              <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
+                <span className="px-3 py-1 rounded-full bg-surface-elevated border border-surface-border text-white">
+                  BS Computer Science (2022–2026)
+                </span>
+                <span className="px-3 py-1 rounded-full bg-accent-violet/15 border border-accent-violet/40 text-accent-violet font-semibold">
+                  CGPA 3.41 / 4.00
+                </span>
+                <span className="px-3 py-1 rounded-full bg-accent-mint/15 border border-accent-mint/40 text-accent-mint font-semibold">
+                  2× Dean's Award
+                </span>
+              </div>
             </Reveal>
 
             {/* CTAs */}
@@ -46,19 +61,19 @@ export const Hero: React.FC = () => {
                 <Button
                   size="lg"
                   variant="primary"
-                  href="#projects"
-                  icon={<ArrowDown className="w-4 h-4" />}
+                  href="#research"
+                  icon={<Sparkles className="w-4 h-4 text-accent-mint" />}
                 >
-                  Explore My Work
+                  Explore Research & UniGuideBot
                 </Button>
 
                 <Button
                   size="lg"
                   variant="secondary"
-                  href="#contact"
-                  icon={<Sparkles className="w-4 h-4 text-accent-mint" />}
+                  href="#projects"
+                  icon={<ArrowDown className="w-4 h-4" />}
                 >
-                  Get In Touch
+                  View All Projects
                 </Button>
               </div>
             </Reveal>
@@ -144,7 +159,7 @@ export const Hero: React.FC = () => {
                         <Badge variant="violet" size="sm">BS CS 2026</Badge>
                       </div>
                       <div className="text-[11px] font-mono text-content-muted flex items-center justify-between">
-                        <span>MERN & RAG Architect</span>
+                        <span>AI Systems & RAG Research</span>
                         <span className="text-accent-mint flex items-center gap-1">
                           <span className="w-1.5 h-1.5 rounded-full bg-accent-mint"></span>
                           UET Mardan
@@ -160,8 +175,8 @@ export const Hero: React.FC = () => {
                     RAG
                   </div>
                   <div>
-                    <div className="text-[10px] text-content-muted uppercase">Context Precision</div>
-                    <div className="text-xs font-semibold text-content-primary">90.27% Benchmark</div>
+                    <div className="text-[10px] text-content-muted uppercase">49-Query Benchmark</div>
+                    <div className="text-xs font-semibold text-content-primary">0.9262 Context Recall</div>
                   </div>
                 </div>
               </div>

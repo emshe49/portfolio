@@ -16,7 +16,7 @@ export const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 40);
 
       // Simple active section detection
-      const sections = ['about', 'projects', 'skills', 'experience', 'education', 'contact'];
+      const sections = ['about', 'research', 'projects', 'skills', 'experience', 'education', 'contact'];
       for (const section of sections.reverse()) {
         const el = document.getElementById(section);
         if (el) {
@@ -36,6 +36,7 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'About', href: '#about', id: 'about' },
+    { name: 'Research', href: '#research', id: 'research' },
     { name: 'Work', href: '#projects', id: 'projects' },
     { name: 'Toolkit', href: '#skills', id: 'skills' },
     { name: 'Experience', href: '#experience', id: 'experience' },

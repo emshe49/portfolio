@@ -10,9 +10,10 @@ export const educationData: Education[] = [
     cgpa: "3.41 / 4.00",
     description: "Specialized in Artificial Intelligence, Distributed Systems, Database Architecture, and Algorithms.",
     highlights: [
-      "Final Year Project: UniGuideBot — Grounded RAG chatbot for academic document retrieval.",
-      "Core Courses: Artificial Intelligence, Data Structures & Algorithms, OS, DBMS, Networks.",
-      "Departmental academic standing: 3.41 CGPA across 8 semesters."
+      "Academic Honors: Received the Dean's Award Certificate of Appreciation twice for academic achievement at UET Mardan.",
+      "Final Year Project: UniGuideBot — AI-powered assistant using RAG and neural reranking for institutional policy navigation.",
+      "Core Courses: Artificial Intelligence, Data Structures & Algorithms, Analysis of Algorithms, Database Systems, Operating Systems, Computer Networks.",
+      "Departmental academic standing: Final CGPA 3.41 / 4.00 across 8 semesters."
     ]
   },
   {
